@@ -8,8 +8,9 @@
 
 require_once __DIR__ . '/includes/titleModify.php';
 
-if ( is_admin() ) {
-	require_once __DIR__ . '/admin/admin.php';
+if (is_admin()) {
+
+    require_once __DIR__ . '/admin/admin.php';
 }
 
 
