@@ -3,8 +3,6 @@
 Plugin Name: Post icons
 Description: Post icons
 Version: 1.0
-*/
-ss*/
 sss*/
 //?>
 <?php
