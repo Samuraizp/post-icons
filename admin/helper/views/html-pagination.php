@@ -1,7 +1,6 @@
 <?php
 
-echo '<tr><td><div class="pagination">
-                        <td>';
+echo '<tr><td><div class="pagination">';
 if ($paged > 1)
 {
 	echo '<a class="first" href="?page=post-icons&pag=1">&laquo;</a>';
@@ -10,27 +9,26 @@ else
 {
 	echo '<span class="first">&laquo;</span>';
 }
-echo '</td><td>';
 for ($p = 1; $p <= $num_pages; $p++)
 {
-	echo '</td><td>';
+	echo '';
 	if ($paged == $p)
 	{
-		echo '<span class="current">' . $p . '</span>';
+		echo ' <span class="current">' . $p . '</span>';
 	}
 	else
 	{
-		echo '<a href="?page=post-icons&pag=' . $p . '">' . $p . '</a>';
+		echo ' <a href="?page=post-icons&pag=' . $p . '">' . $p . '</a>';
 	}
 }
-echo '</td><td>';
+
 if ($paged < $num_pages)
 {
-	echo '<a class="last" href="?page=post-icons&pag=' . $num_pages . '">&raquo;</a>';
+	echo ' <a class="last" href="?page=post-icons&pag=' . $num_pages . '">&raquo;</a>';
 }
 else
 {
-	echo '<span class="last">&raquo;</span>';
+	echo ' <span class="last">&raquo;</span>';
 }
-echo '</td>';
+
 echo '</div></td></tr>';
