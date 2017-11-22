@@ -7,10 +7,24 @@ Version: 1.0
 ?>
 <?php
 
-define('PICONS_PLUGIN', __FILE__);
-define('PICONS_PLUGIN_DIR', untrailingslashit(dirname(PICONS_PLUGIN)));
-define('PICONS_PLUGIN_URL', untrailingslashit(plugins_url('', PICONS_PLUGIN)));
-define('PICONS_PLUGIN_ADMIN_URL', PICONS_PLUGIN_URL . '/admin');
-define('PICONS_PLUGIN_BASENAME', plugin_basename(PICONS_PLUGIN));
+if (!defined('ABSPATH'))
+{
+	exit;
+}
 
-require_once PICONS_PLUGIN_DIR . '/settings.php';
+if (!defined('PICONS_PLUGIN'))
+{
+	define('PICONS_PLUGIN', __FILE__);
+}
+
+if (!class_exists('PostIcons'))
+{
+	include_once dirname(PICONS_PLUGIN) . '/includes/class-picons.php';
+}
+
+function postIcons()
+{
+	return PostIcons::instance();
+}
+
+$GLOBALS['postIcons'] = postIcons();
