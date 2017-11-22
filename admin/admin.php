@@ -27,6 +27,7 @@ if (!class_exists('PIconsAdmin', false)) :
 
 		function registerSettings()
 		{
+			register_setting('picons-settings-group', 'picons_visible');
 			register_setting('picons-settings-group', 'post_title_icon');
 			register_setting('picons-settings-group', 'post_title_icon_position');
 		}

@@ -10,6 +10,11 @@
 		<?php do_settings_sections('picons-settings-group'); ?>
         <table class="form-table">
             <tr valign="top">
+                <th scope="row">Show icon</th>
+                <td><input type='checkbox' id='picons_visible' name='picons_visible' value="1"
+                           <?php checked(get_option('picons_visible'),1)?>>
+            </tr>
+            <tr valign="top">
                 <th scope="row">New Option Name</th>
 				<?php if (!empty($my_posts))
 				{

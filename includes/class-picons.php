@@ -44,7 +44,7 @@ final Class PostIcons
 
 	private function init_hooks()
 	{
-		if (!is_admin())
+		if (!is_admin() && get_option('picons_visible'))
 		{
 			add_filter('the_title', array($this, 'editTitle'), 10, 2);
 		}
